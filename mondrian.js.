@@ -1,0 +1,75 @@
+function setup() {
+  createCanvas(600, 600);
+}
+function preload(){
+  eatSound = loadSound("cp1_smashing.wav")
+}
+  
+var Blue = 0;
+var BlueSpeed = 1;
+var Redsmall = 0;
+var RedsmallSpeed = 1;
+var Green = 0;
+var GreenSpeed = 4;
+var Brown = 500;
+var BrownSpeed = 4;
+var BrownR = 300;
+var BrownRSpeed = 4;
+var Sky = 400;
+var SkySpeed = 4;
+
+function draw() {
+  background(240);
+  strokeCap(SQUARE);
+  noStroke();
+  
+
+  
+  
+  
+ // black square
+   colorMode(HSB);
+  fill(Redsmall,92,5);
+  rect(Redsmall,0, 100, 150);
+  
+  // green square
+  fill('rgba(13,126,0, .9)');
+  rect(300, 150, 250, 250);
+   
+  
+// Blue square
+  fill('rgba(2,6,159, .9)');
+  rect(100, 0, 200, 150);
+  
+// red square
+  fill( 'rgba(255,0,15,.9)');  
+  rect(100, Sky, 200, 300);
+  
+  if (Sky >= 400) {
+    SkySpeed = -3;
+  }
+  //bouncing back-Brown
+  if (Sky <= 300) {
+    SkySpeed = 3;
+  }
+
+ 
+
+stroke(0);
+  strokeWeight(13);
+  line(0, 150, 600, 150); // horizontal#1
+  line(0, 400, 00, 400); // horizontal#2
+  line(0, 400, 600, 400);// horizontal#3
+   line(0, 550, 100, 550);// horizontal#4
+   line(300, 550, 600, 550);// horizontal#5
+  line(300,0, 300, 600);// vertical#2
+ 
+  
+ 
+stroke(0);
+  strokeWeight(13); 
+  line(100,0, 100, 350);// vertical#1
+  line(100,300, 100, 600);// vertical#1-2
+   line(550,50, 550, 600);// vertical#3
+  line(0, 300, 300, 300); // horizontal#2
+}
