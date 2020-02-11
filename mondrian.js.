@@ -1,9 +1,7 @@
 function setup() {
   createCanvas(600, 600);
 }
-function preload(){
-  eatSound = loadSound("cp1_smashing.wav")
-}
+
   
 var Blue = 0;
 var BlueSpeed = 1;
